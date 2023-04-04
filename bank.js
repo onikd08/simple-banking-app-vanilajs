@@ -1,15 +1,21 @@
 const depositField = document.getElementById("deposit-field");
 const withdrawField = document.getElementById("withdraw-field");
 const balance = document.querySelector("#total-balance");
+
+const updateAmount = (id, amount) => {
+    const getAmount = document.getElementById(id);
+    const getAmountValue = getAmount.innerText;
+    const newAmount = Number(getAmountValue) + Number(amount);
+    getAmount.innerText = newAmount;
+};
+
 // Deposit
 document.getElementById('deposit-btn').addEventListener("click", function(){ 
     const depositAmount = depositField.value;
     if (depositAmount === "") {
         alert("Please enter amount");
     } else {
-        const totalDeposit = document.getElementById("total-deposit");
-        const totalDepositAmount = totalDeposit.innerText;
-        totalDeposit.innerText = Number(depositAmount) + Number(totalDepositAmount);
+        updateAmount('total-deposit', depositAmount);
         calculateBalance('deposit', Number(depositAmount));
         depositField.value = "";
     }
@@ -24,9 +30,7 @@ document.getElementById('withdraw-btn').addEventListener("click", function(){
         alert("You do not have enough balance to withdraw");
     }
     else {
-        const totalWithdraw = document.getElementById("total-withdraw");
-        const totalWithdrawAmount = totalWithdraw.innerText;
-        totalWithdraw.innerText = Number(withdrawAmount) + Number(totalWithdrawAmount);
+        updateAmount('total-withdraw', withdrawAmount);
         calculateBalance('withdraw', Number(withdrawAmount));
         withdrawField.value = "";
     }
