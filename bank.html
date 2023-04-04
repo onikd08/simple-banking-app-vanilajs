@@ -15,35 +15,37 @@
                 <!-- Deposit -->
                 <div class="text-center bg-green-400 p-8 rounded-xl">
                     <h4 class="text-2xl"> Deposit</h4>
-                    <h2 class="text-4xl">00$</h2>
+                    <h2 class="text-4xl">$ <span id="total-deposit">00</span></h2>
                 </div>
                 <!-- Withdraw -->
                 <div class="text-center bg-red-400 p-8 rounded-xl">
                     <h4 class="text-2xl"> Withdraw</h4>
-                    <h2 class="text-4xl">00$</h2>
+                    <h2 class="text-4xl">$ <span id="total-withdraw">00</span></h2>
                 </div>
                 <!-- Balance -->
                 <div class="text-center bg-amber-400 p-8 rounded-xl">
                     <h4 class="text-2xl"> Balance</h4>
-                    <h2 class="text-4xl">00$</h2>
+                    <h2 class="text-4xl">$ <span id="total-balance">1240</span></h2>
                 </div>
             </div>
         </section>
         <section class="mt-12">
+            <!-- Deposit -->
             <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto">
                 <div class="text-center bg-cyan-400 p-8 rounded-xl">
                     <h4 class="text-2xl">Enter Deposit Amount</h4>
-                    <input type="number" class="mx-auto p-1 mt-1 block text-2lg">
-                    <button id="deposit" class="bg-cyan-400 px-8 py-2 mt-3 rounded-lg bg-purple-600 text-white hover:bg-red-400">Deposit</button>
+                    <input id="deposit-field" type="number" class="mx-auto p-1 mt-1 block text-2lg rounded-lg" placeholder="Enter Deposit amount">
+                    <button id="deposit-btn" class="bg-cyan-400 px-8 py-2 mt-3 rounded-lg bg-purple-600 text-white hover:bg-red-400">Deposit</button>
                 </div>
                 <!-- Withdraw -->
                 <div class="text-center bg-indigo-400 p-8 rounded-xl">
                     <h4 class="text-2xl">Enter Withdraw Amount</h4>
-                    <input type="number" class="mx-auto p-1 mt-1 block text-2lg">
-                    <button id="withdraw" class="bg-cyan-400 px-8 py-2 mt-3 rounded-lg bg-purple-600 text-white hover:bg-red-400">Withdraw</button>
+                    <input id="withdraw-field" type="number" class="mx-auto p-1 mt-1 block text-2lg rounded-lg" placeholder="Enter Withdraw amount">
+                    <button id="withdraw-btn" class="bg-cyan-400 px-8 py-2 mt-3 rounded-lg bg-purple-600 text-white hover:bg-red-400">Withdraw</button>
                 </div>
             </div>
         </section>
     </main>
+    <script src="bank.js"></script>
 </body>
 </html>

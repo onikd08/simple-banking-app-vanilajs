@@ -5,8 +5,10 @@ const handleClick = (e) => {
     const password = document.getElementById('password').value;
     if (email === "" || password === "") {
         alert("Fields can not be empty");
-    } else {
+    } else if(email === "onikd08@gmail.com" && password === "123456") {
         location.href = 'bank.html';
+    } else{
+        alert("Email or password is incorrect")
     }
 };
 submitButton.addEventListener('click', handleClick);
